@@ -16,8 +16,8 @@
         <header class="header-box">
             <div class="header-content">
                 <h1>Hi, I'm Aarti 🌸</h1>
-                <h2>Data Scientist & Aspiring Data Analyst</h2>
-                <p>Translating complex datasets into beautiful, actionable stories.</p>
+                <h2>Data Science Student & Creative Developer</h2>
+                <p>I specialize in turning complex data into beautiful, actionable stories.</p>
             </div>
         </header>
 
@@ -43,10 +43,10 @@
                 </p>
                 
                 <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-                    <a href="assets/Aarti's CV.pdf" target="_blank" class="action-btn resume-btn" style="background-color: var(--accent-yellow); display: inline-flex; align-items: center; gap: 8px;">
+                    <a href="assets/Aarti_Omane_Resume.pdf" target="_blank" class="action-btn resume-btn" style="background-color: var(--accent-yellow); display: inline-flex; align-items: center; gap: 8px;">
                         <span>📄 View Resume</span>
                     </a>
-                    <a href="assets/Aarti's CV.pdf" download="Aarti's CV.pdf" title="Download PDF" class="action-btn" style="padding: 10px; background-color: white;">
+                    <a href="assets/Aarti_Omane_Resume.pdf" download="Aarti_Omane_Resume.pdf" title="Download PDF" class="action-btn" style="padding: 10px; background-color: white;">
                         <span style="font-size: 20px;">⬇️</span>
                     </a>
                 </div>
@@ -67,7 +67,7 @@
                 <div class="game-side">
                     <h2 class="section-title" style="margin-bottom: 15px; font-size: 20px;">Take a Break & Play! 🎮</h2>
                     <p style="font-size: 14px; margin-bottom: 15px;">Press <strong>SPACEBAR</strong> or <strong>TAP</strong> the screen to jump the data bugs!</p>
-                    <canvas id="miniGame" width="600" height="250"></canvas>
+                    <canvas id="miniGame"></canvas>
                     <audio id="bgMusic" loop preload="auto" src="assets/music.mp3"></audio>
                 </div>
             </div>
@@ -214,18 +214,7 @@
             
             const bgMusic = document.getElementById('bgMusic');
             bgMusic.volume = 0.3; 
-            let audioUnlocked = false;
-
-            document.body.addEventListener('click', () => {
-                if (!audioUnlocked) {
-                    bgMusic.play().then(() => {
-                        bgMusic.pause();
-                        bgMusic.currentTime = 0;
-                        audioUnlocked = true;
-                    }).catch(e => console.log("Audio unlock error:", e));
-                }
-            }, { once: true });
-
+            
             
             function fireConfetti() {
                 const container = document.getElementById("confetti-container");
@@ -282,15 +271,27 @@
             const canvas = document.getElementById('miniGame');
             const ctx = canvas.getContext('2d');
             const chibiImg = document.getElementById('chibiSprite');
+            const gameContainer = document.querySelector('.game-side');
 
-            const dpr = window.devicePixelRatio || 1;
-            const cssWidth = 600;
-            const cssHeight = 250;
-            canvas.width = cssWidth * dpr;
-            canvas.height = cssHeight * dpr;
-            canvas.style.width = `${cssWidth}px`;
-            canvas.style.height = `${cssHeight}px`;
-            ctx.scale(dpr, dpr);
+            function resizeGame() {
+                const rect = gameContainer.getBoundingClientRect();
+                const dpr = window.devicePixelRatio || 1;
+                const width = Math.min(rect.width - 10, 600); 
+                const height = 250;
+                canvas.width = width * dpr;
+                canvas.height = height * dpr;
+                canvas.style.width = `${width}px`;
+                canvas.style.height = `${height}px`;
+                ctx.scale(dpr, dpr);
+                return { width, height };
+            }
+
+            let { width: cssWidth, height: cssHeight } = resizeGame();
+            window.addEventListener('resize', () => {
+                const dims = resizeGame();
+                cssWidth = dims.width;
+                cssHeight = dims.height;
+            });
 
             const groundY = cssHeight - 30;
             let gameStarted = false;
@@ -314,14 +315,13 @@
                     score = 0;
                     obstacles = [];
                     player.y = groundY - player.height;
-                    bgMusic.play().catch(e => console.log(e)); 
+                    bgMusic.play().catch(e => console.log("Music failed:", e)); 
                 } else if (isGameOver) {
                     isGameOver = false;
                     score = 0;
                     obstacles = [];
                     frames = 0;
-                    bgMusic.currentTime = 0; 
-                    bgMusic.play(); 
+                    bgMusic.play().catch(e => console.log("Music failed:", e)); 
                 } else if (player.grounded) {
                     player.dy = player.jumpPower;
                     player.grounded = false;
