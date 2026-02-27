@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarti Omane | Data Scientist 🌸</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="confetti-container"></div>
+
+    <div class="container">
+        
+        <header class="header-box">
+            <div class="header-content">
+                <h1>Hi, I'm Aarti 🌸</h1>
+                <h2>Data Scientist & Aspiring Data Analyst</h2>
+                <p>Translating complex datasets into beautiful, actionable stories.</p>
+            </div>
+        </header>
+
+        <div class="nav-menu">
+            <button class="nav-btn active" data-target="about">🌸 About Aarti</button>
+            <button class="nav-btn" data-target="projects" data-filter="All Loot">🎒 All Projects</button>
+            <button class="nav-btn" data-target="projects" data-filter="Data Lab">📊 Data Lab</button>
+            <button class="nav-btn" data-target="projects" data-filter="ML Forge">🤖 ML Forge</button>
+            <button class="nav-btn" data-target="projects" data-filter="Workshop">👾 Workshop</button>
+            <button class="nav-btn" data-target="awards">🏆 Awards</button>
+            <button class="nav-btn" data-target="certs">💼 Experience</button>
+        </div>
+
+       <section id="about" class="page-section active-section">
+            
+            <div class="content-box" style="box-shadow: 6px 6px 0px var(--accent-pink); margin-bottom: 30px;">
+                <h2 class="section-title" style="margin-bottom: 15px; font-size: 24px;">Hi, I'm Aarti! 🕵🏻‍♀️</h2>
+                <p style="font-size: 16px; line-height: 1.7; margin-bottom: 15px;">
+                    I am a 23-year-old Data Scientist with a deep-seated goal to grow into a specialized <strong>Data Analyst</strong>. Having recently completed my Master's at the University of Greenwich and my BTech in Computer Science and AI, I’ve found my true passion lies in the art of the "Deep Dive"—cleaning messy datasets, uncovering hidden patterns, and translating them into compelling visual stories.
+                </p>
+                <p style="font-size: 16px; line-height: 1.7; margin-bottom: 20px;">
+                    I love building high-impact tools, like my <strong>NHS Performance Suite</strong>, where I turned complex healthcare data into clear, actionable dashboards. Whether I’m performing deep Exploratory Data Analysis on <strong>Amazon Bestsellers</strong> or developing interactive experiences like my Electron-based <strong>Pixel Planet Ultimate</strong> game, I always bring a blend of heavy logic and Ghibli-inspired aesthetics. ✨
+                </p>
+                
+                <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                    <a href="assets/Aarti's CV.pdf" target="_blank" class="action-btn resume-btn" style="background-color: var(--accent-yellow); display: inline-flex; align-items: center; gap: 8px;">
+                        <span>📄 View Resume</span>
+                    </a>
+                    <a href="assets/Aarti's CV.pdf" download="Aarti's CV.pdf" title="Download PDF" class="action-btn" style="padding: 10px; background-color: white;">
+                        <span style="font-size: 20px;">⬇️</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="about-grid">
+                <div class="profile-card">
+                    <img src="assets/Gemini_Generated_Image_ap7ybtap7ybtap7y-2.png" alt="Aarti" class="profile-avatar">
+                    <h2 style="font-family: 'Quicksand', sans-serif; margin-bottom: 5px;">Aarti Omane</h2>
+                    <p style="font-size: 14px; color: var(--text-light); margin-bottom: 15px;">Data Scientist & Aspiring Analyst</p>
+                    <p style="font-size: 13px; font-weight: 600; margin-bottom: 20px;">📧 omaneaarti@gmail.com</p>
+                    <div class="social-links" style="justify-content: center; margin-top: 0;">
+                        <a href="https://github.com/Aa1702" target="_blank" class="action-btn github-btn">GitHub</a>
+                        <a href="https://www.linkedin.com/in/aarti-omane-5a626721b" target="_blank" class="action-btn linkedin-btn">LinkedIn</a>
+                    </div>
+                </div>
+
+                <div class="game-side">
+                    <h2 class="section-title" style="margin-bottom: 15px; font-size: 20px;">Take a Break & Play! 🎮</h2>
+                    <p style="font-size: 14px; margin-bottom: 15px;">Press <strong>SPACEBAR</strong> or <strong>TAP</strong> the screen to jump the data bugs!</p>
+                    <canvas id="miniGame" width="600" height="250"></canvas>
+                    <audio id="bgMusic" loop preload="auto" src="assets/music.mp3"></audio>
+                </div>
+            </div>
+        </section>
+
+        <section id="awards" class="page-section" style="display: none;">
+            <div class="content-box award-box" style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 250px;">
+                    <h2 class="section-title">Hall of Fame 🏆</h2>
+                    <h3>Smart India Hackathon (SIH) 2023</h3>
+                    <span class="badge hackathon-badge">1st Place - National Winner</span>
+                    <p>Developed 'Dhwanibodh', an award-winning project that secured 1st place at the national level.</p>
+                    <p>📚 <strong>Published:</strong> IRJMETS, Volume 06, Issue 05, May 2024.</p>
+                    <a href="https://github.com/Aa1702/dhwanibodh-smart-india-hackathon-2023" target="_blank" class="project-link">View Hackathon Repo ➔</a>
+                </div>
+                <div style="flex: 1; min-width: 250px;">
+                    <img src="assets/sih-trophy.png" alt="SIH Trophy" style="width: 100%; border-radius: 12px; border: 3px solid var(--border-main); box-shadow: 4px 4px 0px var(--accent-yellow);">
+                </div>
+            </div>
+        </section>
+
+        <section id="certs" class="page-section" style="display: none;">
+            <div class="content-box">
+                <h2 class="section-title">Experience & Certs 💼</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <div class="media-container"><img src="assets/data-analyst-pixel.png" alt="Data Analyst"></div>
+                        <div class="card-content">
+                            <h3>Data Analyst • Kabira Mobility</h3>
+                            <span class="badge data-badge">Jan 2022 – Jan 2023</span>
+                            <p>Managed end-to-end sales data and reporting with 100% accuracy across 200+ monthly records.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="media-container"><img src="assets/retail-pixel.png" alt="Sales Associate"></div>
+                        <div class="card-content">
+                            <h3>Sales Associate • TK Maxx, UK</h3>
+                            <span class="badge app-badge">Aug 2025 – Jan 2026</span>
+                            <p>Delivered high-quality customer service in a fast-paced retail environment.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="media-container"><img src="assets/webdev-pixel.png" alt="Web Developer"></div>
+                        <div class="card-content">
+                            <h3>Web Developer Intern • Katare</h3>
+                            <span class="badge ml-badge">Oct 2023 – Nov 2023</span>
+                            <p>Built and deployed multiple functional websites during a BTech internship.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="media-container"><img src="assets/tableau-pixel-cert.png" alt="Tableau Certificate"></div>
+                        <div class="card-content">
+                            <h3>Tableau Analytics • Deloitte</h3>
+                            <span class="badge hackathon-badge">Virtual Internship</span>
+                            <p>Completed hands-on data visualization, interactive dashboard design, and business intelligence reporting.</p>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="media-container"><img src="assets/cloud-pixel-cert.png" alt="Cloud Certificate"></div>
+                        <div class="card-content">
+                            <h3>Cloud Computing • Deloitte</h3>
+                            <span class="badge hackathon-badge">Virtual Internship</span>
+                            <p>Explored cloud architecture, infrastructure scalability, and secure deployment strategies.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="page-section" style="display: none;">
+            <div class="project-grid">
+                <div class="project-card data-card">
+                    <div class="media-container"><img src="assets/nhs-pixel.png" alt="NHS Dashboard"></div>
+                    <div class="card-content">
+                        <h3>NHS Performance Suite</h3>
+                        <span class="badge data-badge">Data Lab</span>
+                        <p>SQL & Tableau analysis of NHS wait times and hospital capacity.</p>
+                        <a href="https://github.com/Aa1702/NHS-Performance-Intelligence-Suite" target="_blank" class="project-link">View Project ➔</a>
+                    </div>
+                </div>
+                <div class="project-card data-card">
+                    <div class="media-container"><img src="assets/amazon-bestselling-books-analysis.png" alt="Amazon EDA"></div>
+                    <div class="card-content">
+                        <h3>Amazon Books EDA</h3>
+                        <span class="badge data-badge">Data Lab</span>
+                        <p>Exploratory data analysis of Amazon bestselling books using Python.</p>
+                        <a href="https://github.com/Aa1702/amazon-bestselling-books-analysis" target="_blank" class="project-link">View Project ➔</a>
+                    </div>
+                </div>
+                <div class="project-card data-card">
+                    <div class="media-container"><img src="assets/title.png" alt="Pokedex"></div>
+                    <div class="card-content">
+                        <h3>✨ Pokédex-Analysis ✨</h3>
+                        <span class="badge data-badge">Data Lab</span>
+                        <p>A robust SQL-based data analysis of Pokémon stats, sounds, and visuals.</p>
+                        <a href="https://github.com/Aa1702/Pokedex-Analysis" target="_blank" class="project-link">View Project ➔</a>
+                    </div>
+                </div>
+                <div class="project-card ml-card">
+                    <div class="media-container"><img src="assets/spacex_falcon9.png" alt="SpaceX"></div>
+                    <div class="card-content">
+                        <h3>SpaceX ML Predictor</h3>
+                        <span class="badge ml-badge">ML Forge</span>
+                        <p>Predicting Falcon 9 rocket launch success using Random Forest algorithms.</p>
+                        <a href="https://github.com/Aa1702/spacex_rocket_landing" target="_blank" class="project-link">View Project ➔</a>
+                    </div>
+                </div>
+                <div class="project-card ml-card">
+                    <div class="media-container"><img src="assets/diabetesimage.png" alt="Diabetes ML"></div>
+                    <div class="card-content">
+                        <h3>Diabetes Predictor</h3>
+                        <span class="badge ml-badge">ML Forge</span>
+                        <p>ML model for diabetes prediction using XGBoost and SMOTE.</p>
+                        <a href="https://github.com/Aa1702/Diabetes" target="_blank" class="project-link">View Project ➔</a>
+                    </div>
+                </div>
+                <div class="project-card app-card">
+                    <div class="media-container"><img src="assets/banner.png" alt="Pixel Planet"></div>
+                    <div class="card-content">
+                        <h3>Pixel Planet Ultimate</h3>
+                        <span class="badge app-badge">Workshop</span>
+                        <p>A cozy, retro-themed country unscramble game built with JS and CSS.</p>
+                        <a href="https://github.com/Aa1702/Pixel_Planet_Ultimate" target="_blank" class="project-link">View Project ➔</a>
+                    </div>
+                </div>
+                <div class="project-card app-card">
+                    <div class="media-container"><img src="assets/image_6.png" alt="Leo Voice Assistant"></div>
+                    <div class="card-content">
+                        <h3>Leo: Voice Assistant</h3>
+                        <span class="badge app-badge">Workshop</span>
+                        <p>Python virtual assistant capable of speech recognition and tasks.</p>
+                        <a href="https://github.com/Aa1702/virtual-voice-assistant-python" target="_blank" class="project-link">View Project ➔</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <img id="chibiSprite" src="assets/Gemini_Generated_Image_ap7ybtap7ybtap7y-2.png" style="display:none;">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            
+            const bgMusic = document.getElementById('bgMusic');
+            bgMusic.volume = 0.3; 
+            let audioUnlocked = false;
+
+            document.body.addEventListener('click', () => {
+                if (!audioUnlocked) {
+                    bgMusic.play().then(() => {
+                        bgMusic.pause();
+                        bgMusic.currentTime = 0;
+                        audioUnlocked = true;
+                    }).catch(e => console.log("Audio unlock error:", e));
+                }
+            }, { once: true });
+
+            
+            function fireConfetti() {
+                const container = document.getElementById("confetti-container");
+                container.innerHTML = ""; 
+                const colors = ['#FFB7C5', '#B5EAD7', '#C4E0F9', '#FDFD96'];
+                for (let i = 0; i < 60; i++) {
+                    const conf = document.createElement("div");
+                    conf.classList.add("confetti-piece");
+                    conf.style.left = Math.random() * 100 + "vw";
+                    conf.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    conf.style.animationDuration = (Math.random() * 2 + 1) + "s";
+                    conf.style.animationDelay = Math.random() * 0.5 + "s";
+                    container.appendChild(conf);
+                }
+                setTimeout(() => { container.innerHTML = ""; }, 3000);
+            }
+
+            
+            const buttons = document.querySelectorAll(".nav-btn");
+            const sections = document.querySelectorAll(".page-section");
+            const portfolioCards = document.querySelectorAll("#projects .project-card");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    buttons.forEach(btn => btn.classList.remove("active"));
+                    button.classList.add("active");
+
+                    const targetSection = button.getAttribute("data-target");
+                    const filterValue = button.getAttribute("data-filter");
+
+                    if (targetSection === "awards") fireConfetti();
+
+                    sections.forEach(sec => {
+                        sec.style.display = "none";
+                    });
+                    
+                    const activeSec = document.getElementById(targetSection);
+                    activeSec.style.display = "block";
+                    activeSec.classList.add("fade-in");
+
+                    if (targetSection === "projects") {
+                        portfolioCards.forEach(card => {
+                            if (filterValue === "All Loot") card.style.display = "flex";
+                            else if (filterValue === "Data Lab" && card.classList.contains("data-card")) card.style.display = "flex";
+                            else if (filterValue === "ML Forge" && card.classList.contains("ml-card")) card.style.display = "flex";
+                            else if (filterValue === "Workshop" && card.classList.contains("app-card")) card.style.display = "flex";
+                            else card.style.display = "none";
+                        });
+                    }
+                });
+            });
+
+            
+            const canvas = document.getElementById('miniGame');
+            const ctx = canvas.getContext('2d');
+            const chibiImg = document.getElementById('chibiSprite');
+
+            const dpr = window.devicePixelRatio || 1;
+            const cssWidth = 600;
+            const cssHeight = 250;
+            canvas.width = cssWidth * dpr;
+            canvas.height = cssHeight * dpr;
+            canvas.style.width = `${cssWidth}px`;
+            canvas.style.height = `${cssHeight}px`;
+            ctx.scale(dpr, dpr);
+
+            const groundY = cssHeight - 30;
+            let gameStarted = false;
+            let isGameOver = false;
+            let score = 0;
+            let frames = 0;
+            let groundOffset = 0;
+            const obstacleTypes = ['💻', '🐛', '📚']; 
+            
+            const player = {
+                x: 60, y: groundY - 90, width: 90, height: 90, 
+                dy: 0, gravity: 0.6, jumpPower: -11, grounded: true
+            };
+            
+            let obstacles = [];
+
+            function jump() {
+                if (!gameStarted) {
+                    gameStarted = true;
+                    isGameOver = false;
+                    score = 0;
+                    obstacles = [];
+                    player.y = groundY - player.height;
+                    bgMusic.play().catch(e => console.log(e)); 
+                } else if (isGameOver) {
+                    isGameOver = false;
+                    score = 0;
+                    obstacles = [];
+                    frames = 0;
+                    bgMusic.currentTime = 0; 
+                    bgMusic.play(); 
+                } else if (player.grounded) {
+                    player.dy = player.jumpPower;
+                    player.grounded = false;
+                }
+            }
+
+            window.addEventListener('keydown', e => { if(e.code === 'Space') { jump(); e.preventDefault(); } });
+            canvas.addEventListener('mousedown', jump);
+            canvas.addEventListener('touchstart', (e) => { e.preventDefault(); jump(); });
+
+            function drawBackground() {
+                let gradient = ctx.createLinearGradient(0, 0, 0, cssHeight);
+                gradient.addColorStop(0, "#EAF0FF"); 
+                gradient.addColorStop(1, "#FFFFFF"); 
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, cssWidth, cssHeight);
+                ctx.fillStyle = "#D4D9F0";
+                ctx.fillRect(0, groundY, cssWidth, 30);
+                ctx.fillStyle = "#B6BEDF";
+                for(let i = 0; i < cssWidth + 40; i += 40) {
+                    ctx.fillRect(i - groundOffset, groundY + 5, 20, 8);
+                }
+            }
+
+            function drawPlayer() {
+                ctx.save();
+                ctx.translate(player.x + player.width/2, player.y + player.height/2);
+                if (!player.grounded) ctx.rotate(-10 * Math.PI / 180); 
+                if (chibiImg.complete && chibiImg.naturalWidth !== 0) {
+                    ctx.drawImage(chibiImg, -player.width/2, -player.height/2, player.width, player.height);
+                } else {
+                    ctx.fillStyle = "#FFB7C5";
+                    ctx.fillRect(-player.width/2, -player.height/2, player.width, player.height);
+                }
+                ctx.restore();
+            }
+
+            let lastTime = 0;
+            const timeStep = 1000 / 60; 
+            let accumulator = 0;
+
+            function gameLoop(timestamp) {
+                if (!lastTime) lastTime = timestamp;
+                let delta = timestamp - lastTime;
+                lastTime = timestamp;
+                if (delta > 250) delta = 250; 
+                accumulator += delta;
+
+                while (accumulator >= timeStep) {
+                    if (gameStarted && !isGameOver) {
+                        player.dy += player.gravity;
+                        player.y += player.dy;
+                        if (player.y + player.height >= groundY) {
+                            player.y = groundY - player.height;
+                            player.dy = 0;
+                            player.grounded = true;
+                        }
+                        groundOffset += 5;
+                        if(groundOffset >= 40) groundOffset = 0;
+                        frames++;
+                        if (frames % 90 === 0) {
+                            let type = obstacleTypes[Math.floor(Math.random() * obstacleTypes.length)];
+                            obstacles.push({ x: cssWidth, y: groundY - 45, width: 45, height: 45, type: type });
+                        }
+                        for (let i = 0; i < obstacles.length; i++) {
+                            let obs = obstacles[i];
+                            obs.x -= 6; 
+                            if (player.x + 30 < obs.x + obs.width - 10 &&
+                                player.x + player.width - 30 > obs.x + 10 &&
+                                player.y + 20 < obs.y + obs.height &&
+                                player.y + player.height > obs.y + 10) {
+                                isGameOver = true;
+                                bgMusic.pause(); 
+                            }
+                            if (obs.x + obs.width < player.x && !obs.passed) {
+                                score++;
+                                obs.passed = true;
+                            }
+                        }
+                        obstacles = obstacles.filter(obs => obs.x + obs.width > 0);
+                    }
+                    accumulator -= timeStep;
+                }
+
+                ctx.clearRect(0, 0, cssWidth, cssHeight);
+                if (!gameStarted) {
+                    drawBackground();
+                    drawPlayer();
+                    ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+                    ctx.fillRect(0, 0, cssWidth, cssHeight);
+                    ctx.fillStyle = "#FFF";
+                    ctx.font = `bold 22px Quicksand`;
+                    ctx.textAlign = "center";
+                    ctx.fillText("TAP OR PRESS SPACE TO START 🚀", cssWidth/2, cssHeight/2);
+                    requestAnimationFrame(gameLoop);
+                    return;
+                }
+                drawBackground();
+                drawPlayer();
+                ctx.textAlign = "left";
+                obstacles.forEach(obs => {
+                    ctx.fillStyle = "#2D3748";
+                    ctx.font = `40px Arial`; 
+                    ctx.fillText(obs.type, obs.x, obs.y + 35);
+                });
+                ctx.fillStyle = "#2D3748";
+                ctx.font = `bold 20px Quicksand`;
+                ctx.fillText(`Score: ${score}`, 20, 35);
+                if (isGameOver) {
+                    ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+                    ctx.fillRect(0, 0, cssWidth, cssHeight);
+                    ctx.fillStyle = "#FFF";
+                    ctx.textAlign = "center";
+                    ctx.font = `bold 30px Quicksand`;
+                    ctx.fillText("CRASHED! 💥", cssWidth/2, cssHeight/2 - 10);
+                    ctx.font = `18px Quicksand`;
+                    ctx.fillText("Tap or Space to restart", cssWidth/2, cssHeight/2 + 25);
+                }
+                requestAnimationFrame(gameLoop);
+            }
+            
+            
+            requestAnimationFrame(gameLoop);
+        });
+    </script>
+</body>
+</html>
